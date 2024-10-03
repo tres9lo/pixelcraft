@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Main Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), 
+              url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto; /* Center the content */
+}
+
+.cta-button {
+  background-color: #ffffff; /* Call to action button color */
+  color: #007BFF;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold; /* Make button text bold */
+}
+
+.cta-button:hover {
+  background-color: #f1f1f1; /* Button hover effect */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  margin-bottom: 15px;
+  color: #007BFF; /* Blue color for headings */
+}
+
+/* Services Section */
+.services-section {
+  margin-bottom: 20px;
+}
+
+.services-section h2 {
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue color for headings */
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between; /* Align cards horizontally */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allow cards to grow */
+  margin: 10px; /* Spacing between cards */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center; /* Center text in card */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #007BFF; /* Blue color for service titles */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Hide scrollbars for WebKit browsers while still allowing scrolling */
+::-webkit-scrollbar {
+  width: 0; /* Width of the scrollbar */
+  height: 0; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* Hide scrollbars for Firefox */
+* {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+}
+
+/* Allow scrolling on the body */
+body {
+  overflow: auto; /* Allow scrolling without showing the scrollbar */
+}
+
+
+/* Optional: Apply scrollbar styles to specific containers */
+.container {
+  overflow-y: auto; /* Ensure the container can scroll */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+}
+
+.hero {
+  background-color: #007BFF; /* Hero section background color */
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ffffff; /* Call to action button color */
+  color: #007BFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f1f1f1; /* Button hover effect */
+}
+
+.about-section,
+.services-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2,
+.services-section h2 {
+  margin-bottom: 15px;
+}
+
+.service {
+  margin-bottom: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+}

@@ -1,0 +1,248 @@
+/* General Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.Home {
+  padding-top: 60px;
+  background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Slide Content */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  color: #fff;
+  z-index: 3;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  text-align: center; /* Center text alignment */
+}
+
+
+.slide-text {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  animation: slideUp 1s ease-out;
+}
+
+.slide-subtext {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* Typing Effect */
+.typing-effect p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2575fc;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(22) 1s infinite alternate;
+}
+
+/* Add a keyframe animation for typing */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no text */
+  }
+  to {
+    width: 100%; /* End with full text */
+  }
+}
+
+/* Optional: Add a pause between loops for smoother transition */
+@keyframes typingPause {
+  0%, 60% {
+    width: 100%; /* Keep text visible */
+  }
+  60%, 100% {
+    width: 0; /* Hide text */
+  }
+}
+
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-image img {
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bars */
+.progress-bars {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.progress-bar {
+  margin-bottom: 30px;
+}
+
+.progress-bar span {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.progress {
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  background-color: #2575fc;
+  height: 100%;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  transition: width 1s ease-in-out;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  flex: 1 1 30%;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding around the content */
+  text-align: center; /* Center the text */
+  border-radius: 0; /* Ensure there is no border-radius */
+  position: relative; /* If you want to use any positioning later */
+  box-shadow: none; /* Remove any potential shadows */
+}
+
+.footer p {
+  margin: 0; /* Remove margin */
+  font-size: 1rem; /* Font size */
+}
+

@@ -1,0 +1,130 @@
+/* Container Styling */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-container h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: pulse 1.5s ease infinite alternate;
+}
+
+.contact-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Form Group Styling */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: left;
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 5px 15px rgba(0, 115, 230, 0.2);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: #0073e6;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005bb5;
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 30px;
+    }
+
+    .contact-container h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-container p {
+        font-size: 1.1em;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+    }
+}
