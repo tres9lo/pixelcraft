@@ -1,92 +1,140 @@
-/* Basic Layout */
+/* General styles */
 .blog-container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 50px;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    animation: fadeIn 1s ease-in;
 }
 
 .blog-header {
     text-align: center;
-    margin-bottom: 50px;
-    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 40px;
 }
 
 .blog-header h1 {
-    font-size: 3em;
-    margin-top: 50px;
-    color: #333;
+    font-size: 3rem;
+    animation: slideIn 1s ease-out;
 }
 
 .blog-header p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #666;
+    animation: slideIn 1.2s ease-out;
 }
 
-/* Blog Post Style */
+/* Featured Post Styles */
+.featured-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.5s ease;
+    max-width: 900px; /* Limit the width of the featured post */
+    margin: 0 auto 40px auto; /* Center the featured post */
+}
+
+.featured-image {
+    width: 40%; /* Reduce the width of the image */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.featured-content {
+    flex: 1;
+}
+
+.featured-content h2 {
+    font-size: 2rem; /* Reduce font size */
+    margin-bottom: 10px;
+}
+
+.featured-content p {
+    font-size: 1rem; /* Reduce font size */
+    margin-bottom: 15px;
+}
+
+.read-more {
+    padding: 8px 15px; /* Slightly reduce button size */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+
+/* Blog Posts Styles */
 .blog-posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .post {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUp 0.5s ease-in-out;
+    transition: transform 0.3s;
 }
 
 .post:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .post-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.post:hover .post-image {
+    transform: scale(1.1);
 }
 
 .post-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 .post-content h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-}
-
-.post-content h2:hover {
-    color: #0073e6;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 .post-content p {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-.read-more {
-    padding: 10px 20px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
-.read-more:hover {
-    background-color: #005bb5;
+.spinner {
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #007BFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
 }
 
 /* Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -96,34 +144,24 @@
     }
 }
 
-@keyframes slideUp {
+@keyframes fadeInUp {
     from {
-        transform: translateY(20px);
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .blog-header h1 {
-        font-size: 2.5em;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-
-    .post-content h2 {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .blog-header h1 {
-        font-size: 2em;
-    }
-
-    .post-content h2 {
-        font-size: 1.2em;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
