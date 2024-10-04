@@ -2,6 +2,7 @@
 .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 50px;
     padding: 20px;
     text-align: center;
     animation: fadeIn 1s ease-in;
